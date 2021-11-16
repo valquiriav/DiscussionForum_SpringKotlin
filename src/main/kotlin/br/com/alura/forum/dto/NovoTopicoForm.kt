@@ -6,17 +6,17 @@ import javax.validation.constraints.Size
 
 data class NovoTopicoForm (
 
-    @field:NotEmpty
-    @Size(min = 5, max = 100)
+    @field:NotEmpty(message = "Campo não pode ser vazio.")
+    @Size(min = 5, max = 100, message = "Tamanho deve ser entre 5 e 100 caracteres.")
     val titulo: String,
 
-    @field:NotEmpty
+    @field:NotEmpty(message = "Campo não pode ser vazio.")
     val mensagem: String,
 
-    @field:NotNull
+    @field:NotNull(message = "Campo não pode ser vazio.")
     val idCurso: Long,
 
-    @field:NotNull
+    @field:NotNull(message = "Campo não pode ser vazio.")
     val idAutor: Long
 
 )
